@@ -53,8 +53,8 @@ const Home: NextPage = () => {
             <Head>
                 <title>
                     {isZero
-                        ? 'Countdown to my birthday | 18 December'
-                        : 'CONGRATULATIONS🎉🥳🎊'}
+                        ? 'CONGRATULATIONS🎉🥳🎊'
+                        : 'Countdown to my birthday | 18 December'}
                 </title>
                 <meta
                     name='description'
