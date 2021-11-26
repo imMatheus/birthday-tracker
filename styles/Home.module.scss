@@ -7,5 +7,60 @@
 }
 
 .centered {
-    background-color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    z-index: 10;
+    position: relative;
+}
+
+.box {
+    // background: -webkit-linear-gradient(90deg, #bc6c25 50%, #283618 50%);
+    // background-position: 10% 500%;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // background-size: 200% 200%;
+    // animation: Animation 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+
+@keyframes Animation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.icon {
+    position: absolute;
+    // top: -20px;
+    animation: fallAnimation infinite;
+    @for $i from 1 through 120 {
+        &:nth-child(#{$i}) {
+            left: calc(random(100) * 1%);
+            animation-delay: calc(-1 * random(2000) * 1ms);
+            animation-duration: calc(random(3000) * 1ms);
+            animation-timing-function: cubic-bezier(
+                random(100) / 100,
+                random(100) / 100,
+                random(100) / 100,
+                random(100) / 100
+            );
+        }
+    }
+}
+
+@keyframes fallAnimation {
+    from {
+        top: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        top: 100vh;
+        transform: translateY(0%);
+    }
 }
