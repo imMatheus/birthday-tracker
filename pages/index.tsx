@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     const [hours, setHours] = useState<number | String>(0)
     const [minutes, setMinutes] = useState<number | String>(0)
     const [seconds, setSeconds] = useState<number | String>(0)
-    const iconsArray = useRef([...Array(120)].map(() => Math.random()))
+    const iconsArray = useRef([...Array(100)].map(() => Math.random()))
     useEffect(() => {
         const _interval = setInterval(() => {
             setTimeNow(new Date())
