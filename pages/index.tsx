@@ -14,6 +14,7 @@ const Home: NextPage = () => {
     const [minutes, setMinutes] = useState<number | String>(0)
     const [seconds, setSeconds] = useState<number | String>(0)
     const iconsArray = useRef([...Array(100)].map(() => Math.random()))
+
     useEffect(() => {
         const _interval = setInterval(() => {
             setTimeNow(new Date())
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
 
             setSeconds(_seconds < 10 ? '0' + _seconds : _seconds)
             setMinutes(_minutes < 10 ? '0' + _minutes : _minutes)
-            setHours(_hours < 24 ? '0' + _hours : _hours)
+            setHours(_hours < 10 ? '0' + _hours : _hours)
             setDays(_days < 10 ? '0' + _days : _days)
         }
     }, [timeNow, birthday, timeInterval])
