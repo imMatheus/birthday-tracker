@@ -6,13 +6,13 @@ import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
     const [timeNow, setTimeNow] = useState(new Date())
-    const [birthday, setBirthday] = useState(new Date('18 December 2021'))
+    const [birthday, setBirthday] = useState(new Date('18 December 2022'))
     const [isZero, setIsZero] = useState(false)
-    const [days, setDays] = useState<number | String>(0)
+    const [days, setDays] = useState<number | string>(0)
     const [timeInterval, setTimeInterval] = useState<any>()
-    const [hours, setHours] = useState<number | String>(0)
-    const [minutes, setMinutes] = useState<number | String>(0)
-    const [seconds, setSeconds] = useState<number | String>(0)
+    const [hours, setHours] = useState<number | string>(0)
+    const [minutes, setMinutes] = useState<number | string>(0)
+    const [seconds, setSeconds] = useState<number | string>(0)
     const iconsArray = useRef([...Array(100)].map(() => Math.random()))
 
     useEffect(() => {
